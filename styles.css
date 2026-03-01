@@ -35,16 +35,24 @@ body.home-page .hero {
   overflow: hidden;
 }
 
-body.home-page .hero-watermark {
+body.home-page .hero::before {
+  content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: min(980px, 86vw);
-  height: auto;
-  transform: translate(-50%, -50%);
-  opacity: 0.34;
-  filter: brightness(1.2) saturate(1.15);
+  inset: 0;
+  background: url("./Logo_AC.svg") no-repeat center / contain;
+  opacity: 0.9;
+  filter: none;
   pointer-events: none;
+  z-index: 0;
+}
+
+body.home-page .hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  z-index: 0;
 }
 
 body.home-page .hero .container {
@@ -64,7 +72,7 @@ a {
 
 .hero {
   padding: 64px 0 52px;
-  background: linear-gradient(180deg, #050505 0%, #0a0a0a 100%);
+  background: #090909;
   border-bottom: 1px solid var(--border);
 }
 
