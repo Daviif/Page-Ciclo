@@ -478,13 +478,117 @@ h2 {
   text-align: center;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1024px) {
+  .container {
+    width: min(100%, 94%);
+  }
+
   .hero {
-    padding-top: 46px;
+    padding: 52px 0 42px;
+  }
+
+  .lead {
+    max-width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: 92%;
+  }
+
+  .hero {
+    padding: 42px 0 34px;
+  }
+
+  body.home-page .hero::before {
+    background-size: cover;
+    background-position: center;
+    opacity: 0.72;
+  }
+
+  body.home-page .hero::after {
+    background: rgba(0, 0, 0, 0.52);
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 9vw, 2.35rem);
+  }
+
+  h2 {
+    font-size: 1.45rem;
+  }
+
+  .lead,
+  .section-text {
+    font-size: 1rem;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+    padding: 14px 16px;
+    border-radius: 12px;
+    font-size: 1.03rem;
+    min-height: 48px;
+    line-height: 1.2;
+  }
+
+  .section,
+  .flow {
+    padding: 34px 0 50px;
   }
 
   .flow-box {
-    padding: 18px;
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .flow-list {
+    padding-left: 18px;
+  }
+
+  .flow-list li {
+    margin-bottom: 16px;
+  }
+
+  .cards,
+  .planos,
+  .cadastro-campos,
+  .pagamento-opcoes {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .plano-card,
+  .cadastro-guia,
+  .voucher-guia,
+  .pagamento-guia,
+  .facial-guia {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .voucher-linha {
+    grid-template-columns: 1fr;
+  }
+
+  .voucher-botao,
+  .resumo-finalizar {
+    width: 100%;
+    text-align: center;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .facial-preview {
+    padding: 10px;
   }
 
   .pagamento-guia {
@@ -493,5 +597,34 @@ h2 {
 
   .facial-opcoes {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand {
+    letter-spacing: 0.1em;
+    font-size: 0.86rem;
+  }
+
+  .eyebrow {
+    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+  }
+
+  .hero {
+    padding-top: 36px;
+  }
+
+  .card h3,
+  .plano-nome {
+    font-size: 1.05rem;
+  }
+
+  .plano-preco {
+    font-size: 0.98rem;
+  }
+
+  .footer {
+    font-size: 0.85rem;
   }
 }
