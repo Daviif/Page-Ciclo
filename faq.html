@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dúvidas Frequentes | Ciclo Academia</title>
+  <link rel="stylesheet" href="styles.css?v=17" />
+</head>
+<body>
+  <main class="flow">
+    <div class="container">
+      <a class="back-link" href="index.html">← Voltar para opções</a>
+
+      <p class="eyebrow">DÚVIDAS FREQUENTES</p>
+      <h1>Perguntas <strong>frequentes</strong></h1>
+
+      <div class="flow-box">
+        <div class="faq-accordion">
+          <details class="faq-item" name="faq">
+            <summary class="faq-question">Preciso baixar algum aplicativo?</summary>
+            <p class="faq-answer">Não é obrigatório! Você pode usar o totem com os digitos do seu CPF.</p>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-question">E se minha digital não funcionar?</summary>
+            <p class="faq-answer">Acesse a seção de renovação no aplicativo e siga as instruções para manter seu acesso ativo.</p>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-question">O totem funciona em horário sem recepção?</summary>
+            <p class="faq-answer">Sim, ative seu acesso por benefício corporativo seguindo as orientações específicas para cada plataforma.</p>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-question">Consigo ver informações sobre meu plano no totem?</summary>
+            <p class="faq-answer">Entre em contato com nosso suporte para assistência imediata.</p>
+          </details>
+
+          <details class="faq-item" name="faq">
+            <summary class="faq-question">É seguro usar minha digital no totem?</summary>
+            <p class="faq-answer">Sim, seu acesso é válido para todas as unidades, basta validar no totem ao chegar.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© Ciclo Academia</p>
+    </div>
+  </footer>
+
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach((item) => {
+      item.addEventListener('toggle', () => {
+        if (!item.open) return;
+
+        faqItems.forEach((otherItem) => {
+          if (otherItem !== item) {
+            otherItem.open = false;
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
